@@ -18,7 +18,7 @@ repository root, aligned with the laboratory curriculum sequence.
 ## 🗂️ Repository Directory Structure
 
 ```
-java_projects/
+Adv-Java/
 ├── README.md                                          # Master repository documentation (this file)
 ├── .gitignore                                         # Git ignore rules for build artifacts & runtime logs
 │
@@ -306,8 +306,8 @@ practical projects. It is useful for:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/gourav-swami/java_projects.git
-cd java_projects
+git clone https://github.com/Yashx011/Adv-Java.git
+cd Adv-Java
 ```
 
 ### Java Projects
@@ -331,9 +331,9 @@ NetBeans, or VS Code, and make sure JDK 17+ is installed and configured.
 
 ## 👨‍💻 Author
 
-**Gourav Swami**
+**Yash Swarnkar**
 
-GitHub: <https://github.com/gourav-swami>
+GitHub: <https://github.com/Yashx011>
 
 ---
 
