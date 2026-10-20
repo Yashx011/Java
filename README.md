@@ -1,58 +1,68 @@
 # Java Projects Collection
 
-A collection of Java projects, practical programs, JDBC applications,
-RMI examples, Servlet/Tomcat work, and supporting Java development
-tools.
+A collection of Java laboratory experiments covering OOP, JDBC, sockets,
+RMI, Servlets, JSP, and Apache Tomcat, along with the ShopSphere project.
 
 ## 📁 Repository Structure
 
 ``` text
 java_projects/
 │
-├── javalab/
-│   └── Java laboratory programs and OOP-based examples
-│
-├── my Sql connect jdbc/
-│   └── MySQL connectivity project using Java JDBC
-│
-├── RMI java/
-│   └── Java RMI client-server example
-│
-├── server client/
-│   └── Java socket-based server-client programs
-│
-├── Student Registration Form/
+├── Exp_01_Student_Registration_Form/
 │   └── Java-based Student Registration Form application
 │
-├── mysql-connector-j-26.7.0/
-│   └── MySQL Connector/J library and source distribution
+├── Exp_02_Calculator/
+│   └── Java Swing calculator built with an MVC structure
 │
-└── apache-tomcat-11.0.25/
-    └── Apache Tomcat 11 server and web applications
+├── Exp_03_Mysql_Connect(JDBC)/
+│   ├── Java JDBC application for connecting to MySQL
+│   └── mysql-connector-j-26.7.0/
+│       └── MySQL Connector/J library and source distribution
+│
+├── Exp_04_Server_Client_Basics/
+│   └── Java socket-based server-client programs
+│
+├── Exp_05_RMI/
+│   └── Java RMI client-server example
+│
+├── Exp_06_Apache_Tomcat/
+│   └── Apache Tomcat 11 server
+│
+├── Exp_06_Servlet_Login_App/
+│   └── Servlet-based login application
+│
+├── Exp_07_JSP_Conversion/
+│   └── JSP conversion of the servlet login application
+│
+└── ShopSphere/
+    └── Java web e-commerce project
 ```
 
-## 🚀 Projects
+## 🚀 Experiments
 
-### 1. Java Lab
+### Exp_01 — Student Registration Form
 
-The `javalab` folder contains Java laboratory programs and examples
-covering core Java concepts such as:
+A Java registration form application demonstrating:
 
--   Classes and Objects
--   OOP concepts
--   Model/View/Controller-style structure
--   Java program execution
--   `.java` and compiled `.class` files
-
-This section can be used for practicing Java fundamentals and college
-laboratory programs.
+-   GUI-based form handling
+-   User input and event handling
+-   Java classes and objects
+-   Database/JDBC integration where applicable
 
 ------------------------------------------------------------------------
 
-### 2. MySQL Connect JDBC
+### Exp_02 — Calculator
 
-The `my Sql connect jdbc` project demonstrates database connectivity
-between Java and MySQL using **JDBC (Java Database Connectivity)**.
+A Java Swing calculator organized using the Model-View-Controller
+pattern. It supports addition, subtraction, multiplication, division, and
+percentage operations.
+
+------------------------------------------------------------------------
+
+### Exp_03 — MySQL Connect (JDBC)
+
+Demonstrates database connectivity between Java and MySQL using
+**JDBC (Java Database Connectivity)**.
 
 **Technologies:**
 
@@ -74,17 +84,33 @@ MySQL Connector/J
 ```
 
 The project contains source code, compiled classes, and the required
-JDBC connector library.
+JDBC connector library. The full Connector/J distribution is kept inside
+the same experiment folder.
 
 ------------------------------------------------------------------------
 
-### 3. Java RMI
+### Exp_04 — Server Client Basics
 
-The `RMI java` project demonstrates **Java Remote Method Invocation
-(RMI)**.
+Java server-client communication examples demonstrating:
 
-RMI allows a Java program to invoke methods on an object running in
-another Java Virtual Machine.
+-   Client-server architecture
+-   Network communication
+-   Sockets
+-   Input/output streams
+-   Sending and receiving data
+
+Basic architecture:
+
+``` text
+Client  ←──── Network Connection ────→  Server
+```
+
+------------------------------------------------------------------------
+
+### Exp_05 — RMI
+
+Demonstrates **Java Remote Method Invocation (RMI)**, which allows a Java
+program to invoke methods on an object running in another JVM.
 
 **Main concepts:**
 
@@ -109,77 +135,10 @@ Remote Server Object
 
 ------------------------------------------------------------------------
 
-### 4. Server Client
+### Exp_06 — Apache Tomcat
 
-The `server client` project contains Java server-client communication
-examples.
-
-The project demonstrates concepts such as:
-
--   Client-server architecture
--   Network communication
--   Sockets
--   Input/output streams
--   Sending and receiving data
-
-Basic architecture:
-
-``` text
-Client  ←──── Network Connection ────→  Server
-```
-
-------------------------------------------------------------------------
-
-### 5. Student Registration Form
-
-The `Student Registration Form` project is a Java-based registration
-form application.
-
-It demonstrates concepts such as:
-
--   GUI-based form handling
--   User input
--   Event handling
--   Java classes and objects
--   Database/JDBC integration where applicable
-
-It can be extended with features such as student record insertion,
-update, deletion, and search.
-
-------------------------------------------------------------------------
-
-## 🗄️ MySQL Connector/J
-
-The `mysql-connector-j-26.7.0` directory contains **MySQL Connector/J**,
-the JDBC driver used by Java applications to communicate with MySQL
-databases.
-
-It is used by projects such as:
-
-``` text
-Java Application
-      ↓
-JDBC API
-      ↓
-MySQL Connector/J
-      ↓
-MySQL Database
-```
-
-The directory contains the Connector/J distribution files, source files,
-documentation, and the `.jar` library.
-
-> Note: This directory is a dependency/library distribution rather than
-> a standalone application project.
-
-------------------------------------------------------------------------
-
-## 🌐 Apache Tomcat 11
-
-The `apache-tomcat-11.0.25` directory contains the Apache Tomcat 11
-server.
-
-Tomcat is used to run Java web applications such as:
+The `Exp_06_Apache_Tomcat` directory contains the Apache Tomcat 11
+server, used to run Java web applications such as:
 
 -   Servlets
 -   JSP applications
@@ -215,6 +174,73 @@ Browser
 
 ------------------------------------------------------------------------
 
+### Exp_06 — Servlet Login App
+
+A Maven-based servlet application demonstrating:
+
+-   Servlets and filters
+-   Session handling
+-   Login and logout flows
+-   Application listeners
+
+Build and deploy it to Tomcat using Maven:
+
+``` bash
+cd Exp_06_Servlet_Login_App
+mvn clean package
+```
+
+------------------------------------------------------------------------
+
+### Exp_07 — JSP Conversion
+
+A JSP version of the servlet login application. It demonstrates:
+
+-   JSP pages and JSTL
+-   Request handling and form submission
+-   Session-based authentication
+-   Reusable page fragments such as headers and footers
+
+Build it with Maven:
+
+``` bash
+cd Exp_07_JSP_Conversion/servlet
+mvn clean package
+```
+
+------------------------------------------------------------------------
+
+### ShopSphere
+
+ShopSphere is a Java web e-commerce project. It includes modules for
+database access, networking, RMI, a Swing admin application, and a
+Servlet/JSP storefront.
+
+------------------------------------------------------------------------
+
+## 🗄️ MySQL Connector/J
+
+The `mysql-connector-j-26.7.0` directory (inside
+`Exp_03_Mysql_Connect(JDBC)`) contains **MySQL Connector/J**, the JDBC
+driver used by Java applications to communicate with MySQL databases.
+
+It is used by projects such as:
+
+``` text
+Java Application
+      ↓
+JDBC API
+      ↓
+MySQL Connector/J
+      ↓
+MySQL Database
+```
+
+> Note: This directory is a dependency/library distribution rather than
+> a standalone application project.
+
+------------------------------------------------------------------------
+
 ## 🛠️ Technologies Used
 
 -   **Java**
@@ -226,6 +252,7 @@ Browser
 -   **Servlets**
 -   **JSP**
 -   **Apache Tomcat**
+-   **Maven**
 -   **HTML/CSS/JavaScript** where applicable
 
 ------------------------------------------------------------------------
@@ -240,7 +267,7 @@ practical projects. It is useful for:
 -   Practicing JDBC and MySQL connectivity
 -   Understanding client-server programming
 -   Learning Java RMI
--   Working with Servlets and Tomcat
+-   Working with Servlets, JSP, and Tomcat
 -   Maintaining college laboratory projects
 -   Preparing Java projects for future development and placement
     practice
@@ -279,7 +306,7 @@ For MySQL-based projects:
 
 ### Tomcat Projects
 
-1.  Open `apache-tomcat-11.0.25`.
+1.  Open `Exp_06_Apache_Tomcat`.
 2.  Place the web application in the `webapps` directory if required.
 3.  Start Tomcat using the scripts in `bin`.
 4.  Open the application through the Tomcat server URL.
